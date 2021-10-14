@@ -1,503 +1,729 @@
 <!DOCTYPE HTML>
 <!--
-	Prologue by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+    Prologue by HTML5 UP
+    html5up.net | @ajlkn
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
-	<head>
-		<title>Prologue by HTML5 UP</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<script src="https://smtpjs.com/v3/smtp.js"></script>
-		<!-- <script src="index.js"></script> -->
+<head>
+    <title>Prologue by HTML5 UP</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <!-- <script src="index.js"></script> -->
 
-		<style>
-			* {box-sizing: border-box}
-			/* body {font-family: Verdana, sans-serif; margin:0} */
-			/* body {font-family: Verdana, sans-serif; margin:0} */
-			.mySlides {display: none}
-			img {vertical-align: middle;}
-			
-			/* Slideshow container */
-			.slideshow-container {
-			  max-width: 2000px;
-			  position: relative;
-			  margin: auto;
-			}
-			
-			/* Next & previous buttons */
-			.prev, .next {
-			  cursor: pointer;
-			  position: absolute;
-			  top: 50%;
-			  width: auto;
-			  padding: 16px;
-			  margin-top: -22px;
-			  color: white;
-			  font-weight: bold;
-			  font-size: 18px;
-			  transition: 0.6s ease;
-			  border-radius: 0 3px 3px 0;
-			  user-select: none;
-			  background-color: rgba(0,0,0,0.8);
-			}
-			
-			/* Position the "next button" to the right */
-			.next {
-			  right: 0;
-			  border-radius: 3px 0 0 3px;
-			}
-			
-			/* On hover, add a black background color with a little bit see-through */
-			.prev:hover, .next:hover {
-			  background-color: rgba(0,0,0,0.8);
-			}
-			
-			/* Caption text */
-			.text {
-			  /* color: #f2f2f2; */
-			  color: black;
-			  font-weight: bold;
-			  font-size: 15px;
-			  padding: 8px 12px;
-			  position: absolute;
-			  bottom: 8px;
-			  width: 100%;
-			  text-align: center;
-			}
-			
-			/* Number text (1/3 etc) */
-			.numbertext {
-			  color: #f2f2f2;
-			  font-size: 12px;
-			  padding: 8px 12px;
-			  position: absolute;
-			  top: 0;
-			}
-			
-			/* The dots/bullets/indicators */
-			.dot {
-			  cursor: pointer;
-			  height: 15px;
-			  width: 15px;
-			  margin: 0 2px;
-			  background-color: #bbb;
-			  border-radius: 50%;
-			  display: inline-block;
-			  transition: background-color 0.6s ease;
-			}
-			
-			.active, .dot:hover {
-			  background-color: #717171;
-			}
-			
-			/* Fading animation */
-			.fade {
-			  -webkit-animation-name: fade;
-			  -webkit-animation-duration: 1.5s;
-			  animation-name: fade;
-			  animation-duration: 1.5s;
-			}
-			
-			@-webkit-keyframes fade {
-			  from {opacity: .4} 
-			  to {opacity: 1}
-			}
-			
-			@keyframes fade {
-			  from {opacity: .4} 
-			  to {opacity: 1}
-			}
-			
-			/* On smaller screens, decrease text size */
-			@media only screen and (max-width: 300px) {
-			  .prev, .next,.text {font-size: 11px}
-			}
+    <style>
+        * {
+            box-sizing: border-box
+        }
+        /* body {font-family: Verdana, sans-serif; margin:0} */
+        /* body {font-family: Verdana, sans-serif; margin:0} */
+        .mySlides {
+            display: none
+        }
 
-			.no-bullet-point{
-				list-style-type: none;
-			}
-			</style>
+        .mySlides2 {
+            display: none
+        }
 
-	</head>
-	<body class="is-preload">
+        img {
+            vertical-align: middle;
+        }
 
-		<!-- Header -->
-			<div id="header">
+        /* Slideshow container */
+        .slideshow-container {
+            max-width: 2000px;
+            position: relative;
+            margin: auto;
+        }
 
-				<div class="top">
-
-					<!-- Logo -->
-						<div id="logo">
-							<span class="image avatar48"><img src="images/avatar.jpg" alt="" /></span>
-							<h1 id="title">James Yakas</h1>
-							<p>Web Developer</p>
-						</div>
-
-					<!-- Nav -->
-						<nav id="nav">
-							<ul>
-								<li><a href="#top" id="top-link"><span class="icon solid fa-home">Intro</span></a></li>
-								<li><a href="#portfolio" id="portfolio-link"><span class="icon solid fa-th">Portfolio</span></a></li>
-								<li><a href="#about" id="about-link"><span class="icon solid fa-user">About Me</span></a></li>
-								<li><a href="#contact" id="contact-link"><span class="icon solid fa-envelope">Contact</span></a></li>
-							</ul>
-						</nav>
-
-				</div>
-
-				<div class="bottom">
-
-					<!-- Social Icons -->
-						<ul class="icons">
-							<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-							<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-							<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-							<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
-							<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-						</ul>
-
-				</div>
-
-			</div>
-
-		<!-- Main -->
-			<div id="main">
-
-				<!-- Intro -->
-					<section id="top" class="one dark cover">
-						<div class="container">
-
-							<header>
-								<h2 class="alt">Hi! I'm <strong>James Yakas</strong>, a web developer.<br />
-								Welcome to my portfolio!</h2>
-								<p></p>
-							</header>
-
-							<footer>
-								<a href="#portfolio" class="button scrolly">Portfolio</a>
-							</footer>
-
-						</div>
-					</section>
+        /* Next & previous buttons */
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+            background-color: rgba(0,0,0,0.8);
+        }
 
 
-					<!-- <div class="slideshow-container">
+        /* Position the "next button" to the right */
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
 
-						<div class="mySlides fade">
-						  <div class="numbertext">1 / 3</div>
-						  <img src="images/HLAdminCreate.png" style="width:100%">
-						  <div class="text">Caption Text</div>
-						</div>
-						
-						<div class="mySlides fade">
-						  <div class="numbertext">2 / 3</div>
-						  <img src="images/HLAdminCreateImage.png" style="width:100%">
-						  <div class="text">Caption Two</div>
-						</div>
-						
-						<div class="mySlides fade">
-						  <div class="numbertext">3 / 3</div>
-						  <img src="images/HLAdminCuisine.png" style="width:100%">
-						  <div class="text">Caption Three</div>
-						</div>
-						
-						<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-						<a class="next" onclick="plusSlides(1)">&#10095;</a>
-						
-					</div>
-						<br>
-						
-					<div style="text-align:center">
-						<span class="dot" onclick="currentSlide(1)"></span> 
-						<span class="dot" onclick="currentSlide(2)"></span> 
-						<span class="dot" onclick="currentSlide(3)"></span> 
-					</div> -->
-					
+            /* On hover, add a black background color with a little bit see-through */
+            .prev:hover, .next:hover {
+                background-color: rgba(0,0,0,0.8);
+            }
 
-				<!-- Portfolio -->
-					<div id="portfolio" class="two">
-						<div class="container">
+        /* Caption text */
+        .text {
+            /* color: #f2f2f2; */
+            color: black;
+            font-weight: bold;
+            font-size: 15px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
+            text-align: center;
+        }
 
-							<header>
-								<center><h2>Portfolio</h2></center>
-							</header>
+        /* Number text (1/3 etc) */
+        .numbertext {
+            color: #f2f2f2;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+        }
 
-							<center><p>Here is some of my work, though I have a lot more to display when it's ready. Alhough the aesthetics is not my forte, I'm more concerned on functionality, I do try my best.</p></center>
+        /* The dots/bullets/indicators */
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
 
-							<div class="row">
-								<div class="col-12 col-12-mobile">
-									 <article class="item">
-										<!-- <a href="#" class="image fit"><img src="images/pic02.jpg" alt="" /></a> -->
-										<header>
-											<center><h2>Happy Local</h2></center>
-										</header>
-										<center>Happy Local is a website where users can search for food or drink specials based on their suburb</center>
-									</article> 
+            .active, .dot:hover {
+                background-color: #717171;
+            }
 
+        .dot2 {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
 
-									<div class="slideshow-container">
-
-										<div class="mySlides fade">
-										<div class="numbertext">1 / 14</div>
-										<img src="images/HLLanding.png" style="width:100%">
-										<div class="text" id="text">Landing Page</div>
-										</div>
-										
-										<div class="mySlides fade">
-											<div class="numbertext">2 / 14</div>
-											<img src="images/HLList.png" style="width:100%">
-											<div class="text" id="text">Establishment search results</div>
-										</div>
-										
-										<div class="mySlides fade">
-										<div class="numbertext">3 / 14</div>
-										<img src="images/HLEstablishmentPage.png" style="width:100%">
-										<div class="text" id="text">Establishment page</div>
-										</div>
-
-										<div class="mySlides fade">
-											<div class="numbertext">4 / 14</div>
-											<img src="images/HLMap.png" style="width:100%">
-											<div class="text" id="text">Map of establishments</div>
-										</div>
-										
-										<div class="mySlides fade">
-											<div class="numbertext">5 / 14</div>
-											<img src="images/HLLogin.png" style="width:100%">
-											<div class="text" id="text">Admin login</div>
-										</div>
-										
-										<div class="mySlides fade">
-											<div class="numbertext">6 / 14</div>
-											<img src="images/HLAdminEstablishment.png" style="width:100%">
-											<div class="text" id="text">Establishment management</div>
-										</div>
-										
-										<div class="mySlides fade">
-											<div class="numbertext">7 / 14</div>
-											<img src="images/HLAdminCreate.png" style="width:100%">
-											<div class="text" id="text">Create</div>
-										</div>
-										
-										<div class="mySlides fade">
-											<div class="numbertext">8 / 14</div>
-											<img src="images/HLAdminCreateImage.png" style="width:100%">
-											<div class="text" id="text">Upload image</div>
-										</div>
-										
-										<div class="mySlides fade">
-											<div class="numbertext">9 / 14</div>
-											<img src="images/HLAdminVisability.png" style="width:100%">
-											<div class="text" id="text">Toogle visability</div>
-										</div>
-										
-										<div class="mySlides fade">
-											<div class="numbertext">10 / 14</div>
-											<img src="images/HLAdminErrorHandling.png" style="width:100%">
-											<div class="text" id="text">Error handling</div>
-										</div>
-										
-										<div class="mySlides fade">
-											<div class="numbertext">11 / 14</div>
-											<img src="images/HLAdminDelete.png" style="width:100%">
-											<div class="text" id="text">Delete</div>
-										</div>
-										
-										<div class="mySlides fade">
-											<div class="numbertext">12 / 14</div>
-											<img src="images/HLAdminDeleteWarning.png" style="width:100%">
-											<div class="text" id="text">Delete restrict</div>
-										</div>
-										
-										<div class="mySlides fade">
-											<div class="numbertext">13 / 14</div>
-											<img src="images/HLAdminCuisine.png" style="width:100%">
-											<div class="text" id="text">Cuisines</div>
-										</div>
-										
-										<div class="mySlides fade">
-											<div class="numbertext">14 / 14</div>
-											<img src="images/HLAdminExport.png" style="width:100%">
-											<div class="text" id="text">Export</div>
-										</div>										
-										
-										
-										<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-										<a class="next" onclick="plusSlides(1)">&#10095;</a>
-										
-									</div>
-										<br>
-										
-									<div style="text-align:center">
-										<span class="dot" onclick="currentSlide(1)"></span> 
-										<span class="dot" onclick="currentSlide(2)"></span> 
-										<span class="dot" onclick="currentSlide(3)"></span> 
-										<span class="dot" onclick="currentSlide(4)"></span> 
-										<span class="dot" onclick="currentSlide(5)"></span> 
-										<span class="dot" onclick="currentSlide(6)"></span> 
-										<span class="dot" onclick="currentSlide(7)"></span> 
-										<span class="dot" onclick="currentSlide(8)"></span> 
-										<span class="dot" onclick="currentSlide(9)"></span> 
-										<span class="dot" onclick="currentSlide(10)"></span> 
-										<span class="dot" onclick="currentSlide(11)"></span> 
-										<span class="dot" onclick="currentSlide(12)"></span> 
-										<span class="dot" onclick="currentSlide(13)"></span> 
-										<span class="dot" onclick="currentSlide(14)"></span> 
-									</div>
-
-								</div>
-							</div>
-
-						</div>
-					</div>
-
-				<!-- About Me -->
-					<section id="about" class="three">
-						<div class="container">
-
-							<header>
-								<h2>About Me</h2>
-							</header>
-
-							<!-- <a href="#" class="image featured"><img src="images/pic08.jpg" alt="" /></a> -->
-
-							<p>I have completed a Bachelor of Computing Systems at Unitec, giving me knowledge and experience in web, software and app development,
-								 database design & development, cloud application design and development as well as adopting an agile methodology.</p>
-
-						</div>
-					</section>
-
-				<!-- Contact -->
-					<section id="contact" class="four">
-						<div class="container">
-
-							<header>
-								<h2>Contact</h2>
-							</header>
-
-							<p></p>
-
-							 <form> <!-- method="POST" action="#" -->
-								<div class="row">
-									<div class="col-6 col-12-mobile"><input id="name" type="text" name="name" placeholder="Name" /></div>
-									<div class="col-6 col-12-mobile"><input id="email" type="text" name="email" placeholder="Email" /></div>
-									<div class="col-12">
-										<textarea id="message" name="message" placeholder="Message"></textarea>
-									</div>
-									<div class="col-12">
-										<input type="button" value="Send Message" onclick="sendEmail()"/> <!-- onclick="sendEmail()" -->
-									</div>
-								</div>
-							</form>
-
-						</div>
-					</section>
-
-			</div>
-
-		<!-- Footer -->
-			<div id="footer">
-
-				<!-- Copyright -->
-					<ul class="copyright">
-						<li><a href="http://html5up.net"></a></li>
-					</ul>
-
-			</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-			<script>
-				var slideIndex = 1;
-				showSlides(slideIndex);
-				
-				function plusSlides(n) {
-				  showSlides(slideIndex += n);
-				}
-				
-				function currentSlide(n) {
-				  showSlides(slideIndex = n);
-
-				//   	// Change text colour
-				// 	var text = document.getElementById("text");
-				//   if (n == 1){
-				// 	alert("hello");
-				//   }
-				}
-				
-				function showSlides(n) {
-				  var i;
-				  var slides = document.getElementsByClassName("mySlides");
-				  var dots = document.getElementsByClassName("dot");
-				  if (n > slides.length) {slideIndex = 1}    
-				  if (n < 1) {slideIndex = slides.length}
-				  for (i = 0; i < slides.length; i++) {
-					  slides[i].style.display = "none";  
-				  }
-				  for (i = 0; i < dots.length; i++) {
-					  dots[i].className = dots[i].className.replace(" active", "");
-				  }
-				  slides[slideIndex-1].style.display = "block";  
-				  dots[slideIndex-1].className += " active";
+            .active, .dot2:hover {
+                background-color: #717171;
+            }
 
 
-				//   // Change text colour
-				//   var text = document.getElementById("text");
-				//   if (n >= 1 && n <= 5){
-				// 	text.style.color = "magenta";
-				//   }
-				}
-				</script>
+        /* Fading animation */
+        .fade {
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 1.5s;
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
 
-				<script>
-						function sendEmail(){
-							// Email.send("testZAB@outlook.com",
-							// "testZAB@outlook.com",
-							// "This is a subject",
-							// "this is the body",
-							// "smtp-mail.outlook.com",
-							// "testZAB@outlook.com",
-							// "Abcdef1@");
+        @-webkit-keyframes fade {
+            from {
+                opacity: .4
+            }
 
-							var name = document.getElementById("name").value;
-							var email = document.getElementById("email").value;
-							var message = document.getElementById("message").value;
+            to {
+                opacity: 1
+            }
+        }
+
+        @keyframes fade {
+            from {
+                opacity: .4
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        /* On smaller screens, decrease text size */
+        @media only screen and (max-width: 300px) {
+            .prev, .next, .text {
+                font-size: 11px
+            }
+        }
+
+        .no-bullet-point {
+            list-style-type: none;
+        }
+    </style>
+
+</head>
+<body class="is-preload">
+
+    <!-- Header -->
+    <div id="header">
+
+        <div class="top">
+
+            <!-- Logo -->
+            <div id="logo">
+                <span class="image avatar48"><img src="images/avatar.jpg" alt="" /></span>
+                <h1 id="title">James Yakas</h1>
+                <p>Web Developer</p>
+            </div>
+
+            <!-- Nav -->
+            <nav id="nav">
+                <ul>
+                    <li><a href="#top" id="top-link"><span class="icon solid fa-home">Intro</span></a></li>
+                    <li><a href="#portfolio" id="portfolio-link"><span class="icon solid fa-th">Portfolio</span></a></li>
+                    <li><a href="#about" id="about-link"><span class="icon solid fa-user">About Me</span></a></li>
+                    <li><a href="#contact" id="contact-link"><span class="icon solid fa-envelope">Contact</span></a></li>
+                </ul>
+            </nav>
+
+        </div>
+
+        <div class="bottom">
+
+            <!-- Social Icons -->
+            <ul class="icons">
+                <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+                <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+                <li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
+                <li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
+                <li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+            </ul>
+
+        </div>
+
+    </div>
+
+    <!-- Main -->
+    <div id="main">
+
+        <!-- Intro -->
+        <section id="top" class="one dark cover">
+            <div class="container">
+
+                <header>
+                    <h2 class="alt">
+                        Hi! I'm <strong>James Yakas</strong>, a web developer.<br />
+                        Welcome to my portfolio!
+                    </h2>
+                    <p></p>
+                </header>
+
+                <footer>
+                    <a href="#portfolio" class="button scrolly">Portfolio</a>
+                </footer>
+
+            </div>
+        </section>
+
+
+        <!-- <div class="slideshow-container">
+
+            <div class="mySlides fade">
+              <div class="numbertext">1 / 3</div>
+              <img src="images/HLAdminCreate.png" style="width:100%">
+              <div class="text">Caption Text</div>
+            </div>
+
+            <div class="mySlides fade">
+              <div class="numbertext">2 / 3</div>
+              <img src="images/HLAdminCreateImage.png" style="width:100%">
+              <div class="text">Caption Two</div>
+            </div>
+
+            <div class="mySlides fade">
+              <div class="numbertext">3 / 3</div>
+              <img src="images/HLAdminCuisine.png" style="width:100%">
+              <div class="text">Caption Three</div>
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        </div>
+            <br>
+
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div> -->
+        <!-- Portfolio -->
+        <div id="portfolio" class="two">
+            <div class="container">
+
+                <header>
+                    <center><h2>Portfolio</h2></center>
+                </header>
+
+                <center><p>Alhough the aesthetics is not my forte, I'm more concerned on functionality, I do try my best.</p></center>
+
+                <div class="row">
+                    <div class="col-12 col-12-mobile">
+                        <article class="item">
+                            <!-- <a href="#" class="image fit"><img src="images/pic02.jpg" alt="" /></a> -->
+                            <header>
+                                <center><h2>Happy Local</h2></center>
+                            </header>
+                            <center>Happy Local is a website where users can search for food or drink specials based on their suburb</center>
+                        </article>
+
+
+                        <div class="slideshow-container">
+
+                            <div class="mySlides fade">
+                                <div class="numbertext">1 / 14</div>
+                                <img src="images/HLLanding.png" style="width:100%">
+                                <div class="text" id="text">Landing Page</div>
+                            </div>
+
+                            <div class="mySlides fade">
+                                <div class="numbertext">2 / 14</div>
+                                <img src="images/HLList.png" style="width:100%">
+                                <div class="text" id="text">Establishment search results</div>
+                            </div>
+
+                            <div class="mySlides fade">
+                                <div class="numbertext">3 / 14</div>
+                                <img src="images/HLEstablishmentPage.png" style="width:100%">
+                                <div class="text" id="text">Establishment page</div>
+                            </div>
+
+                            <div class="mySlides fade">
+                                <div class="numbertext">4 / 14</div>
+                                <img src="images/HLMap.png" style="width:100%">
+                                <div class="text" id="text">Map of establishments</div>
+                            </div>
+
+                            <div class="mySlides fade">
+                                <div class="numbertext">5 / 14</div>
+                                <img src="images/HLLogin.png" style="width:100%">
+                                <div class="text" id="text">Admin login</div>
+                            </div>
+
+                            <div class="mySlides fade">
+                                <div class="numbertext">6 / 14</div>
+                                <img src="images/HLAdminEstablishment.png" style="width:100%">
+                                <div class="text" id="text">Establishment management</div>
+                            </div>
+
+                            <div class="mySlides fade">
+                                <div class="numbertext">7 / 14</div>
+                                <img src="images/HLAdminCreate.png" style="width:100%">
+                                <div class="text" id="text">Create</div>
+                            </div>
+
+                            <div class="mySlides fade">
+                                <div class="numbertext">8 / 14</div>
+                                <img src="images/HLAdminCreateImage.png" style="width:100%">
+                                <div class="text" id="text">Upload image</div>
+                            </div>
+
+                            <div class="mySlides fade">
+                                <div class="numbertext">9 / 14</div>
+                                <img src="images/HLAdminVisability.png" style="width:100%">
+                                <div class="text" id="text">Toogle visability</div>
+                            </div>
+
+                            <div class="mySlides fade">
+                                <div class="numbertext">10 / 14</div>
+                                <img src="images/HLAdminErrorHandling.png" style="width:100%">
+                                <div class="text" id="text">Error handling</div>
+                            </div>
+
+                            <div class="mySlides fade">
+                                <div class="numbertext">11 / 14</div>
+                                <img src="images/HLAdminDelete.png" style="width:100%">
+                                <div class="text" id="text">Delete</div>
+                            </div>
+
+                            <div class="mySlides fade">
+                                <div class="numbertext">12 / 14</div>
+                                <img src="images/HLAdminDeleteWarning.png" style="width:100%">
+                                <div class="text" id="text">Delete restrict</div>
+                            </div>
+
+                            <div class="mySlides fade">
+                                <div class="numbertext">13 / 14</div>
+                                <img src="images/HLAdminCuisine.png" style="width:100%">
+                                <div class="text" id="text">Cuisines</div>
+                            </div>
+
+                            <div class="mySlides fade">
+                                <div class="numbertext">14 / 14</div>
+                                <img src="images/HLAdminExport.png" style="width:100%">
+                                <div class="text" id="text">Export</div>
+                            </div>
+
+
+                            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                        </div>
+                        <br>
+
+                        <div style="text-align:center">
+                            <span class="dot" onclick="currentSlide(1)"></span>
+                            <span class="dot" onclick="currentSlide(2)"></span>
+                            <span class="dot" onclick="currentSlide(3)"></span>
+                            <span class="dot" onclick="currentSlide(4)"></span>
+                            <span class="dot" onclick="currentSlide(5)"></span>
+                            <span class="dot" onclick="currentSlide(6)"></span>
+                            <span class="dot" onclick="currentSlide(7)"></span>
+                            <span class="dot" onclick="currentSlide(8)"></span>
+                            <span class="dot" onclick="currentSlide(9)"></span>
+                            <span class="dot" onclick="currentSlide(10)"></span>
+                            <span class="dot" onclick="currentSlide(11)"></span>
+                            <span class="dot" onclick="currentSlide(12)"></span>
+                            <span class="dot" onclick="currentSlide(13)"></span>
+                            <span class="dot" onclick="currentSlide(14)"></span>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12 col-12-mobile">
+                        <article class="item">
+                            <!-- <a href="#" class="image fit"><img src="images/pic02.jpg" alt="" /></a> -->
+                            <header>
+                                <center><h2>What can I make?</h2></center>
+                            </header>
+                            <center>What Can I Make? is a website where users can search for recipes based on their needs. The point in this project is to test my skills rather than anything else.</center>
+                        </article>
+
+                        <div class="slideshow-container">
+
+                            <div class="mySlides2 fade">
+                                <div class="numbertext">1 / 15</div>
+                                <img src="images/WCIM/SearchRecipe.png" style="width:100%">
+                                <div class="text" id="text">Search Recipe</div>
+                            </div>
+
+                            <div class="mySlides2 fade">
+                                <div class="numbertext">2 / 15</div>
+                                <img src="images/WCIM/FilterRecipe.png" style="width:100%">
+                                <div class="text" id="text">Filter Recipe</div>
+                            </div>
+
+                            <div class="mySlides2 fade">
+                                <div class="numbertext">3 / 15</div>
+                                <img src="images/WCIM/MobileFilters.png" style="width:100%">
+                                <div class="text" id="text">Mobile Filters</div>
+                            </div>
+
+                            <div class="mySlides2 fade">
+                                <div class="numbertext">4 / 15</div>
+                                <img src="images/WCIM/ViewRecipe.png" style="width:100%">
+                                <div class="text" id="text">View Recipe</div>
+                            </div>
+
+                            <div class="mySlides2 fade">
+                                <div class="numbertext">5 / 15</div>
+                                <img src="images/WCIM/SendSMS.png" style="width:100%">
+                                <div class="text" id="text">Send SMS</div>
+                            </div>
+
+                            <div class="mySlides2 fade">
+                                <div class="numbertext">6 / 15</div>
+                                <img src="images/WCIM/SendEmail.png" style="width:100%">
+                                <div class="text" id="text">Send Email</div>
+                            </div>
+
+                            <div class="mySlides2 fade">
+                                <div class="numbertext">7 / 15</div>
+                                <img src="images/WCIM/Binder.png" style="width:100%">
+                                <div class="text" id="text">Recipe Binder</div>
+                            </div>
+
+                            <div class="mySlides2 fade">
+                                <div class="numbertext">8 / 15</div>
+                                <img src="images/WCIM/ShareTwitter.png" style="width:100%">
+                                <div class="text" id="text">Share Twitter</div>
+                            </div>
+
+                            <div class="mySlides2 fade">
+                                <div class="numbertext">9 / 15</div>
+                                <img src="images/WCIM/Login.png" style="width:100%">
+                                <div class="text" id="text">Login</div>
+                            </div>
+
+                            <div class="mySlides2 fade">
+                                <div class="numbertext">10 / 15</div>
+                                <img src="images/WCIM/TwoFactor.png" style="width:100%">
+                                <div class="text" id="text">Two-factor Authentication</div>
+                            </div>
+
+                            <div class="mySlides2 fade">
+                                <div class="numbertext">11 / 15</div>
+                                <img src="images/WCIM/Register.png" style="width:100%">
+                                <div class="text" id="text">Register</div>
+                            </div>
+
+                            <div class="mySlides2 fade">
+                                <div class="numbertext">12 / 15</div>
+                                <img src="images/WCIM/ConfirmEmail.png" style="width:100%">
+                                <div class="text" id="text">Confirm Email</div>
+                            </div>
+
+                            <div class="mySlides2 fade">
+                                <div class="numbertext">13 / 15</div>
+                                <img src="images/WCIM/AdminTags.png" style="width:100%">
+                                <div class="text" id="text">Admin - Tag management</div>
+                            </div>
+
+                            <div class="mySlides2 fade">
+                                <div class="numbertext">14 / 15</div>
+                                <img src="images/WCIM/AddTagToRecipe.png" style="width:100%">
+                                <div class="text" id="text">Admin - Add Tag to Recipe</div>
+                            </div>
+
+                            <div class="mySlides2 fade">
+                                <div class="numbertext">15 / 15</div>
+                                <img src="images/WCIM/AdminRoles.png" style="width:100%">
+                                <div class="text" id="text">Admin - Roles</div>
+                            </div>
+
+                            <a class="prev" onclick="plusSlides2(-1)">&#10094;</a>
+                            <a class="next" onclick="plusSlides2(1)">&#10095;</a>
+                        </div>
+
+                        <br>
+                        <div style="text-align:center">
+                            <span class="dot2" onclick="currentSlide2(1)"></span>
+                            <span class="dot2" onclick="currentSlide2(2)"></span>
+                            <span class="dot2" onclick="currentSlide2(3)"></span>
+                            <span class="dot2" onclick="currentSlide2(4)"></span>
+                            <span class="dot2" onclick="currentSlide2(5)"></span>
+                            <span class="dot2" onclick="currentSlide2(6)"></span>
+                            <span class="dot2" onclick="currentSlide2(7)"></span>
+                            <span class="dot2" onclick="currentSlide2(8)"></span>
+                            <span class="dot2" onclick="currentSlide2(9)"></span>
+                            <span class="dot2" onclick="currentSlide2(10)"></span>
+                            <span class="dot2" onclick="currentSlide2(11)"></span>
+                            <span class="dot2" onclick="currentSlide2(12)"></span>
+                            <span class="dot2" onclick="currentSlide2(12)"></span>
+                            <span class="dot2" onclick="currentSlide2(13)"></span>
+                            <span class="dot2" onclick="currentSlide2(14)"></span>
+                            <span class="dot2" onclick="currentSlide2(15)"></span>
+                            <!--<span class="dot2" onclick="currentSlide2(3)"></span>-->
+                            <!--<span class="dot2" onclick="currentSlide(4)"></span>
+    <span class="dot2" onclick="currentSlide(5)"></span>
+    <span class="dot2" onclick="currentSlide(6)"></span>
+    <span class="dot2" onclick="currentSlide(7)"></span>
+    <span class="dot2" onclick="currentSlide(8)"></span>
+    <span class="dot2" onclick="currentSlide(9)"></span>
+    <span class="dot" onclick="currentSlide(10)"></span>
+    <span class="dot" onclick="currentSlide(11)"></span>
+    <span class="dot" onclick="currentSlide(12)"></span>
+    <span class="dot" onclick="currentSlide(13)"></span>
+    <span class="dot" onclick="currentSlide(14)"></span>-->
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- About Me -->
+        <section id="about" class="three">
+            <div class="container">
+
+                <header>
+                    <h2>About Me</h2>
+                </header>
+
+                <!-- <a href="#" class="image featured"><img src="images/pic08.jpg" alt="" /></a> -->
+
+                <p>
+                    I have completed a Bachelor of Computing Systems at Unitec, giving me knowledge and experience in web, software and app development,
+                    database design & development, cloud application design and development as well as adopting an agile methodology.
+                </p>
+
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="four">
+            <div class="container">
+
+                <header>
+                    <h2>Contact</h2>
+                </header>
+
+                <p></p>
+
+                <form>
+                    <!-- method="POST" action="#" -->
+                    <div class="row">
+                        <div class="col-6 col-12-mobile"><input id="name" type="text" name="name" placeholder="Name" /></div>
+                        <div class="col-6 col-12-mobile"><input id="email" type="text" name="email" placeholder="Email" /></div>
+                        <div class="col-12">
+                            <textarea id="message" name="message" placeholder="Message"></textarea>
+                        </div>
+                        <div class="col-12">
+                            <input type="button" value="Send Message" onclick="sendEmail()" /> <!-- onclick="sendEmail()" -->
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Footer -->
+    <div id="footer">
+
+        <!-- Copyright -->
+        <ul class="copyright">
+            <li><a href="http://html5up.net"></a></li>
+        </ul>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+
+            //   	// Change text colour
+            // 	var text = document.getElementById("text");
+            //   if (n == 1){
+            // 	alert("hello");
+            //   }
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+
+
+            //   // Change text colour
+            //   var text = document.getElementById("text");
+            //   if (n >= 1 && n <= 5){
+            // 	text.style.color = "magenta";
+            //   }
+        }
+    </script>
+
+    <script>
+        var slideIndex2 = 1;
+        showSlides2(slideIndex2);
+
+        function plusSlides2(n) {
+            showSlides2(slideIndex2 += n);
+        }
+
+        function currentSlide2(n) {
+            showSlides2(slideIndex2 = n);
+
+            //   	// Change text colour
+            // 	var text = document.getElementById("text");
+            //   if (n == 1){
+            // 	alert("hello");
+            //   }
+        }
+
+        function showSlides2(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides2");
+            var dots = document.getElementsByClassName("dot2");
+            if (n > slides.length) { slideIndex2 = 1 }
+            if (n < 1) { slideIndex2 = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex2 - 1].style.display = "block";
+            dots[slideIndex2 - 1].className += " active";
+
+
+            //   // Change text colour
+            //   var text = document.getElementById("text");
+            //   if (n >= 1 && n <= 5){
+            // 	text.style.color = "magenta";
+            //   }
+        }
+    </script>
+
+    <script>
+        function sendEmail() {
+            // Email.send("testZAB@outlook.com",
+            // "testZAB@outlook.com",
+            // "This is a subject",
+            // "this is the body",
+            // "smtp-mail.outlook.com",
+            // "testZAB@outlook.com",
+            // "Abcdef1@");
+
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var message = document.getElementById("message").value;
 
 
 
-							Email.send({
-								SecureToken : "841bb810-bc79-49fb-a88e-c1af77905ef5",
-								To : 'testzab@outlook.com',
-								From : 'testzab@outlook.com',
-								Subject : "Portfolio contact message",
-								Body : "From " + email + " " +  name + " " + message
-							}).then(
-							message => alert(message)
-							);
+            Email.send({
+                SecureToken: "841bb810-bc79-49fb-a88e-c1af77905ef5",
+                To: 'testzab@outlook.com',
+                From: 'testzab@outlook.com',
+                Subject: "Portfolio contact message",
+                Body: "From " + email + " " + name + " " + message
+            }).then(
+                message => alert(message)
+            );
 
-							// Email.send({
-							// 	Host: "smtp-mail.outlook.com",
-							// 	Username : "testZAB@outlook.com",
-							// 	Password : "Abcdef1@",
-							// 	To : 'testZAB@outlook.com',
-							// 	From : "testZAB@outlook.com",
-							// 	Subject : "<email subject>",
-							// 	Body : "<email body>",
-							// 	}).then(
-							// 		message => alert("mail sent successfully")
-							// );
-						}
-				</script>
+            // Email.send({
+            // 	Host: "smtp-mail.outlook.com",
+            // 	Username : "testZAB@outlook.com",
+            // 	Password : "Abcdef1@",
+            // 	To : 'testZAB@outlook.com',
+            // 	From : "testZAB@outlook.com",
+            // 	Subject : "<email subject>",
+            // 	Body : "<email body>",
+            // 	}).then(
+            // 		message => alert("mail sent successfully")
+            // );
+        }
+    </script>
 
-	</body>
+</body>
 </html>
