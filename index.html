@@ -27,6 +27,10 @@
             display: none
         }
 
+        .mySlides3 {
+            display: none
+        }
+
         img {
             vertical-align: middle;
         }
@@ -117,6 +121,21 @@
         }
 
             .active, .dot2:hover {
+                background-color: #717171;
+            }
+
+        .dot3 {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+            .active, .dot3:hover {
                 background-color: #717171;
             }
 
@@ -532,6 +551,80 @@
                     </div>
                 </div>
 
+
+
+                <div class="row">
+                    <div class="col-12 col-12-mobile">
+                        <article class="item">
+                            <!-- <a href="#" class="image fit"><img src="images/pic02.jpg" alt="" /></a> -->
+                            <header>
+                                <center><h2>Chat Class</h2></center>
+                            </header>
+                            <center>Chat Class is a website where users can create chats for their classes to discuss the topics, share and get help.</center>
+                        </article>
+
+                        <div class="slideshow-container">
+
+                            <div class="mySlides3 fade">
+                                <div class="numbertext">1 / 5</div>
+                                <img src="images/ChatClass/Landingpage.png" style="width:100%">
+                                <div class="text" id="text">Home / Popular Categories</div>
+                            </div>
+
+                            <div class="mySlides3 fade">
+                                <div class="numbertext">2 / 5</div>
+                                <img src="images/ChatClass/SearchChat.png" style="width:100%">
+                                <div class="text" id="text">Search Chat</div>
+                            </div>
+
+                            <div class="mySlides3 fade">
+                                <div class="numbertext">3 / 5</div>
+                                <img src="images/ChatClass/SearchCategory.png" style="width:100%">
+                                <div class="text" id="text">Search Category</div>
+                            </div>
+
+                            <div class="mySlides3 fade">
+                                <div class="numbertext">4 / 5</div>
+                                <img src="images/ChatClass/CreateRoom.png" style="width:100%">
+                                <div class="text" id="text">Create Room</div>
+                            </div>
+
+                            <div class="mySlides3 fade">
+                                <div class="numbertext">5 / 5</div>
+                                <img src="images/ChatClass/Chat.png" style="width:100%">
+                                <div class="text" id="text">Chat</div>
+                            </div>
+
+                            <a class="prev" onclick="plusSlides3(-1)">&#10094;</a>
+                            <a class="next" onclick="plusSlides3(1)">&#10095;</a>
+
+                            <br>
+                            <div style="text-align:center">
+                                <span class="dot3" onclick="currentSlide3(1)"></span>
+                                <span class="dot3" onclick="currentSlide3(2)"></span>
+                                <span class="dot3" onclick="currentSlide3(3)"></span>
+                                <span class="dot3" onclick="currentSlide3(4)"></span>
+                                <span class="dot3" onclick="currentSlide3(5)"></span>
+
+                                <!--<span class="dot2" onclick="currentSlide2(3)"></span>-->
+                                <!--<span class="dot2" onclick="currentSlide(4)"></span>
+                                <span class="dot2" onclick="currentSlide(5)"></span>
+                                <span class="dot2" onclick="currentSlide(6)"></span>
+                                <span class="dot2" onclick="currentSlide(7)"></span>
+                                <span class="dot2" onclick="currentSlide(8)"></span>
+                                <span class="dot2" onclick="currentSlide(9)"></span>
+                                <span class="dot" onclick="currentSlide(10)"></span>
+                                <span class="dot" onclick="currentSlide(11)"></span>
+                                <span class="dot" onclick="currentSlide(12)"></span>
+                                <span class="dot" onclick="currentSlide(13)"></span>
+                                <span class="dot" onclick="currentSlide(14)"></span>-->
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                </div>
             </div>
         </div>
 
@@ -565,14 +658,14 @@
 
                 <div>
                     <div style="display: inline-block; margin-right:10%;">
-                        <img src="images/phone-73-64.png"/><br /><br />
+                        <img src="images/phone-73-64.png" /><br /><br />
                         <h3 style="display: inline-block;">Phone</h3>
                         <div>021 026 50189</div>
                         <div>09-6315483</div>
                     </div>
 
                     <div style="display: inline-block;vertical-align:top">
-                        <img src="images/text-file-5-64.png" /><br /><br />                   
+                        <img src="images/text-file-5-64.png" /><br /><br />
                         <h3 style="display: inline-block;">Email</h3>
                         <div>james21444@hotmail.com</div>
                     </div>
@@ -698,6 +791,35 @@
             //   if (n >= 1 && n <= 5){
             // 	text.style.color = "magenta";
             //   }
+        }
+    </script>
+
+    <script>
+        var slideIndex3 = 1;
+        showSlides3(slideIndex3);
+
+        function plusSlides3(n) {
+            showSlides3(slideIndex3 += n);
+        }
+
+        function currentSlide3(n) {
+            showSlides3(slideIndex3 = n);
+        }
+
+        function showSlides3(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides3");
+            var dots = document.getElementsByClassName("dot3");
+            if (n > slides.length) { slideIndex3 = 1 }
+            if (n < 1) { slideIndex3 = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex3 - 1].style.display = "block";
+            dots[slideIndex3 - 1].className += " active";
         }
     </script>
 
