@@ -42,6 +42,25 @@ const projects = {
         { src: "images/ChatClass/CreateRoom.png", caption: "Create Room" },
         { src: "images/ChatClass/Chat.png", caption: "Chat" },
         // Add more images and descriptions as needed
+    ],
+    project4: [
+        { src: "images/StockAnalyser/FormAndResults1080.png", caption: "Form and results" },
+        { src: "images/StockAnalyser/DaysPassed1080.png", caption: "Stock analysis" },
+        // Add more images and descriptions as needed
+    ],
+    project5: [
+        { src: "images/GistDownloader/Downloading1080.png", caption: "Downloading Gists" },
+        { src: "images/GistDownloader/DownloadComplete1080.png", caption: "Download Complete" },
+        { src: "images/GistDownloader/DownloadsFolder1080.png", caption: "Downloads Folder" },
+        { src: "images/GistDownloader/DownloadedGists1080.png", caption: "Downloaded Gists" },
+        // { src: "images/GistDownloader/25601440res.png", caption: "2560 x 1440 res" },
+        // { src: "images/GistDownloader/19201080res.png", caption: "1920 x 1080 res" },
+        // Add more images and descriptions as needed
+    ],
+    project6: [ // Uses 2560x1440 resolution with 1920x1440 browser responsive design
+        { src: "images/InsuranceCalculator/Form.png", caption: "Form" },
+        { src: "images/InsuranceCalculator/Calculate.png", caption: "Calculate" },
+        // Add more images and descriptions as needed
     ]
 };
 
@@ -53,18 +72,18 @@ function openModal(projectId) {
     projects[projectId].forEach(image => {
         const modalItem = document.createElement('div');
         modalItem.classList.add('modal-item');
-        
+
         const img = document.createElement('img');
         img.src = image.src;
         img.alt = image.caption;
-        
+
         const caption = document.createElement('p');
         caption.classList.add('caption');
         caption.textContent = image.caption;
-        
+
         modalItem.appendChild(img);
         modalItem.appendChild(caption);
-        
+
         modalContent.appendChild(modalItem);
     });
 
