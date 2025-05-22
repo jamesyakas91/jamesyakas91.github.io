@@ -61,7 +61,24 @@ const projects = {
         { src: "images/InsuranceCalculator/Form.png", caption: "Form" },
         { src: "images/InsuranceCalculator/Calculate.png", caption: "Calculate" },
         // Add more images and descriptions as needed
-    ]
+    ],
+    project7: [
+        { src: "images/CashFlowCalculator/CashFlowCalculatorForm.png", caption: "Form" },
+        { src: "images/CashFlowCalculator/CashFlowCalculatorFormFilled.png", caption: "Form inputs" },
+        { src: "images/CashFlowCalculator/CashFlowCalculatorResults.png", caption: "Years" },
+        { src: "images/CashFlowCalculator/CashFlowCalculatorResults2.png", caption: "Results" },
+        // Add more images and descriptions as needed
+    ],
+    project8: [
+        { src: "images/LaptopExtractor/ExtractSpecifications.png", caption: "URL input" },
+        { src: "images/LaptopExtractor/ExtractSpecificationsExtracting.png", caption: "Extracting" },
+        { src: "images/LaptopExtractor/ExtractSpecificationsError.png", caption: "Error" },
+        { src: "images/LaptopExtractor/ExtractSpecificationsSuccess.png", caption: "Success" },
+        { src: "images/LaptopExtractor/ExtractedLaptops1.png", caption: "Excel output 1" },
+        { src: "images/LaptopExtractor/ExtractedLaptops2.png", caption: "Excel output 2" },
+        // Add more images and descriptions as needed
+    ],
+    
 };
 
 function openModal(projectId) {
